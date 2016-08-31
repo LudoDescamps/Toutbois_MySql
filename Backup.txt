@@ -1,0 +1,15 @@
+
+Nom*jTextField2*NumEtRue**59200
+rytrh*jTextField2*jytj*ytjt*djytdj
+rytrh*jTextField2*jytj*ytjt*djytdj
+rytrh*jTextField2*jytj*ytjt*djytdj
+rytrh*jTextField2*jytj*ytjt*djytdj
+[Ljava.lang.String;@708954e9
+jTextField2*jTextField1*jTextField1*jTextField2*jTextField2
+jTextField2*jTextField1*jTextField1*jTextField2*jTextField2
+jTextField2*jTextField1*jTextField1*jTextField2*jTextField2
+jTextField2*jTextField1*jTextField1*jTextField2*jTextField2
+*dsfsfd*fghft*gfhfg**null
+*sefsef*sgseg*segsegs**javax.swing.DefaultComboBoxModel@508e3c01
+texte à imprimer
+texte à imprimer
