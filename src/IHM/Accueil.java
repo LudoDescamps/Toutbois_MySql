@@ -41,7 +41,6 @@ public class Accueil extends javax.swing.JFrame {
         setTitle("TOUTBOIS Gestion");
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(825, 550));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -69,9 +68,9 @@ public class Accueil extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(660, 480, 140, 14);
 
-        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IHM/grossiste-fournisseur-mobilierdejardin3.jpg"))); // NOI18N
+        jLabelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/grossiste-fournisseur-mobilierdejardin3.jpg"))); // NOI18N
         jPanel1.add(jLabelImage);
-        jLabelImage.setBounds(150, 130, 500, 281);
+        jLabelImage.setBounds(150, 130, 500, 260);
 
         jButtonQuitter.setText("Quitter");
         jButtonQuitter.addMouseListener(new java.awt.event.MouseAdapter() {

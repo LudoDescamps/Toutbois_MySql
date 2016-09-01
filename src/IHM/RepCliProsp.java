@@ -173,12 +173,8 @@ public class RepCliProsp extends javax.swing.JDialog {
             .addGroup(jPanelDenominationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelDenominationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelDenominationLayout.createSequentialGroup()
-                        .addComponent(jLabelDenominationNomSociete)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDenominationLayout.createSequentialGroup()
-                        .addComponent(jLabelDenominationIdentifiant)
-                        .addGap(18, 18, Short.MAX_VALUE)))
+                    .addComponent(jLabelDenominationNomSociete)
+                    .addComponent(jLabelDenominationIdentifiant, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addGroup(jPanelDenominationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldDenominationNomSociete, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,7 +219,7 @@ public class RepCliProsp extends javax.swing.JDialog {
 
         jLabelAdressePays.setText("Pays");
 
-        jComboBoxPays.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sélectionnez le pays", "Allemagne", "Autriche", "Belgique", "Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "France", "Grèce", "Hongrie", "Irlande", "Italie", "Lituanie", "Lettonie", "Luxembourg", "Malte", "Pays-Bas", "Pologne", "Portugal", "République tchèque", "Roumanie", "Royaume-Uni", "Slovaquie", "Slovénie", "Suède" }));
+        jComboBoxPays.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "France", "Allemagne", "Autriche", "Belgique", "Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "Grèce", "Hongrie", "Irlande", "Italie", "Lituanie", "Lettonie", "Luxembourg", "Malte", "Pays-Bas", "Pologne", "Portugal", "République tchèque", "Roumanie", "Royaume-Uni", "Slovaquie", "Slovénie", "Suède" }));
         jComboBoxPays.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxPaysActionPerformed(evt);
@@ -660,11 +656,11 @@ public class RepCliProsp extends javax.swing.JDialog {
         jPanelFond.add(jButtonAnnuler);
         jButtonAnnuler.setBounds(610, 600, 90, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IHM/LogoTronconeuse.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LogoTronconeuse.png"))); // NOI18N
         jPanelFond.add(jLabel1);
         jLabel1.setBounds(430, 220, 385, 385);
 
-        jMenuRepresentant.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IHM/technicalsupportrepresentative_male_dark_32.png"))); // NOI18N
+        jMenuRepresentant.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/technicalsupportrepresentative_male_dark_32.png"))); // NOI18N
         jMenuRepresentant.setText("Représentant");
         jMenuRepresentant.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -673,7 +669,7 @@ public class RepCliProsp extends javax.swing.JDialog {
         });
         jMenuBar1.add(jMenuRepresentant);
 
-        jMenuClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IHM/folder_customer_32.png"))); // NOI18N
+        jMenuClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/folder_customer_32.png"))); // NOI18N
         jMenuClient.setText("Client");
         jMenuClient.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -682,7 +678,7 @@ public class RepCliProsp extends javax.swing.JDialog {
         });
         jMenuBar1.add(jMenuClient);
 
-        jMenuProspect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IHM/telephone_32.png"))); // NOI18N
+        jMenuProspect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/telephone_32.png"))); // NOI18N
         jMenuProspect.setText("Prospect");
         jMenuProspect.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -691,7 +687,7 @@ public class RepCliProsp extends javax.swing.JDialog {
         });
         jMenuBar1.add(jMenuProspect);
 
-        jMenuImprimer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IHM/print_32.png"))); // NOI18N
+        jMenuImprimer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/print_32.png"))); // NOI18N
         jMenuImprimer.setText("Imprimer");
         jMenuImprimer.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jMenuImprimer.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -903,12 +899,12 @@ public class RepCliProsp extends javax.swing.JDialog {
                 jTextFieldContactPrenom.getText()+" " +jTextFieldContactTelephone1.getText()+" " +jTextFieldContactTelephone2.getText()+" " +jTextFieldContactFax.getText()+" " +
                     jTextFieldContactMail.getText()+" " + jTextFieldComplementSiret.getText()+" " + jTextFieldComplementRepresentant.getText()+" " + jTextFieldComplementSalaireFixeBrut.getText()+" " +jTextFieldContactMail.getText()+" " + jTextFieldComplementSiret.getText()+" " + jTextFieldComplementRepresentant.getText()+" " + jTextFieldComplementSalaireFixeBrut.getText()+" " + jTextFieldComplementTauxDeCommission.getText()+ " " +jTextFieldComplementTauxDeCommission.getText()+" " +
                          jTextFieldInformationCommercialeCommande.getText();
-        //jTextArea1.setText(chaineSaisi);
         
-        Client client1 = new Client(jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(), jTextFieldAdresseNumeroRue.getText() ,jTextFieldAdresseComplement.getText(), 
+        
+        /*Client client1 = new Client(jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(), jTextFieldAdresseNumeroRue.getText() ,jTextFieldAdresseComplement.getText(), 
             jTextFieldAdresseCP.getText(),jTextFieldAdresseVille.getText(), jTextFieldAdresseCedex.getText(),jComboBoxPays.getSelectedItem().toString(),jTextFieldContactNom.getText(),
                 jTextFieldContactPrenom.getText(),jTextFieldContactTelephone1.getText(),jTextFieldContactTelephone2.getText(),jTextFieldContactFax.getText(),
-                    jTextFieldContactMail.getText());
+                    jTextFieldContactMail.getText());*/
         
         
     }//GEN-LAST:event_jButtonEnregisterMouseClicked
@@ -932,9 +928,21 @@ public class RepCliProsp extends javax.swing.JDialog {
     private void jMenuImprimerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuImprimerMouseClicked
         // TODO add your handling code here:
         
+        String menu = Character.toString(infoMenu);
+        //Mets les champs de la fiche dans un tableau apres les avoir convertit en String
+        String tabChaineSaisie[] = { jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(),
+            jTextFieldAdresseNumeroRue.getText(), jTextFieldAdresseComplement.getText(), jTextFieldAdresseCP.getText(),
+            jTextFieldAdresseVille.getText(), jTextFieldAdresseCedex.getText(),jComboBoxPays.getSelectedItem().toString(),
+            jTextFieldContactNom.getText(), jTextFieldContactPrenom.getText(),jTextFieldContactTelephone1.getText(),
+            jTextFieldContactTelephone2.getText(),jTextFieldContactFax.getText(),jTextFieldContactMail.getText(), 
+            jTextFieldComplementSiret.getText(), jTextFieldComplementRepresentant.getText(),
+            jTextFieldComplementSalaireFixeBrut.getText(), jTextFieldComplementTauxDeCommission.getText(),
+            jTextFieldInformationCommercialeCommande.getText(), jTextFieldDerniereProspectionDate.getText(), menu};
+        
+        
         //Méthode imprimer de Impression
         Impression fiche = new Impression();
-        fiche.imprimer();
+        fiche.imprimer(tabChaineSaisie);
     }//GEN-LAST:event_jMenuImprimerMouseClicked
 
     /**

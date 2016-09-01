@@ -7,7 +7,7 @@
         <Menu class="javax.swing.JMenu" name="jMenuRepresentant">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IHM/technicalsupportrepresentative_male_dark_32.png"/>
+              <Image iconType="3" name="/Images/technicalsupportrepresentative_male_dark_32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Repr&#xe9;sentant"/>
           </Properties>
@@ -18,7 +18,7 @@
         <Menu class="javax.swing.JMenu" name="jMenuClient">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IHM/folder_customer_32.png"/>
+              <Image iconType="3" name="/Images/folder_customer_32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Client"/>
           </Properties>
@@ -29,7 +29,7 @@
         <Menu class="javax.swing.JMenu" name="jMenuProspect">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IHM/telephone_32.png"/>
+              <Image iconType="3" name="/Images/telephone_32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Prospect"/>
           </Properties>
@@ -40,7 +40,7 @@
         <Menu class="javax.swing.JMenu" name="jMenuImprimer">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IHM/print_32.png"/>
+              <Image iconType="3" name="/Images/print_32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Imprimer"/>
             <Property name="horizontalAlignment" type="int" value="11"/>
@@ -120,14 +120,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabelDenominationNomSociete" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabelDenominationIdentifiant" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabelDenominationNomSociete" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDenominationIdentifiant" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="73" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -300,8 +294,8 @@
             <Component class="javax.swing.JComboBox" name="jComboBoxPays">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="29">
-                    <StringItem index="0" value="S&#xe9;lectionnez le pays"/>
+                  <StringArray count="28">
+                    <StringItem index="0" value="France"/>
                     <StringItem index="1" value="Allemagne"/>
                     <StringItem index="2" value="Autriche"/>
                     <StringItem index="3" value="Belgique"/>
@@ -312,24 +306,23 @@
                     <StringItem index="8" value="Espagne"/>
                     <StringItem index="9" value="Estonie"/>
                     <StringItem index="10" value="Finlande"/>
-                    <StringItem index="11" value="France"/>
-                    <StringItem index="12" value="Gr&#xe8;ce"/>
-                    <StringItem index="13" value="Hongrie"/>
-                    <StringItem index="14" value="Irlande"/>
-                    <StringItem index="15" value="Italie"/>
-                    <StringItem index="16" value="Lituanie"/>
-                    <StringItem index="17" value="Lettonie"/>
-                    <StringItem index="18" value="Luxembourg"/>
-                    <StringItem index="19" value="Malte"/>
-                    <StringItem index="20" value="Pays-Bas"/>
-                    <StringItem index="21" value="Pologne"/>
-                    <StringItem index="22" value="Portugal"/>
-                    <StringItem index="23" value="R&#xe9;publique tch&#xe8;que"/>
-                    <StringItem index="24" value="Roumanie"/>
-                    <StringItem index="25" value="Royaume-Uni"/>
-                    <StringItem index="26" value="Slovaquie"/>
-                    <StringItem index="27" value="Slov&#xe9;nie"/>
-                    <StringItem index="28" value="Su&#xe8;de"/>
+                    <StringItem index="11" value="Gr&#xe8;ce"/>
+                    <StringItem index="12" value="Hongrie"/>
+                    <StringItem index="13" value="Irlande"/>
+                    <StringItem index="14" value="Italie"/>
+                    <StringItem index="15" value="Lituanie"/>
+                    <StringItem index="16" value="Lettonie"/>
+                    <StringItem index="17" value="Luxembourg"/>
+                    <StringItem index="18" value="Malte"/>
+                    <StringItem index="19" value="Pays-Bas"/>
+                    <StringItem index="20" value="Pologne"/>
+                    <StringItem index="21" value="Portugal"/>
+                    <StringItem index="22" value="R&#xe9;publique tch&#xe8;que"/>
+                    <StringItem index="23" value="Roumanie"/>
+                    <StringItem index="24" value="Royaume-Uni"/>
+                    <StringItem index="25" value="Slovaquie"/>
+                    <StringItem index="26" value="Slov&#xe9;nie"/>
+                    <StringItem index="27" value="Su&#xe8;de"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -995,7 +988,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/IHM/LogoTronconeuse.png"/>
+              <Image iconType="3" name="/Images/LogoTronconeuse.png"/>
             </Property>
           </Properties>
           <Constraints>
