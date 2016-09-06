@@ -5,9 +5,10 @@
  */
 package Utilitaire;
 
-import IHM.RepCliProsp;
+import IHM.RepCliProspOLD;
 import java.io.*;
 import javax.swing.JTextField;
+
 
 
 public class Impression{

@@ -22,11 +22,13 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.table.TableModel;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 /**
  *
  * @author ldescamps
  */
-public class RepCliProsp extends javax.swing.JDialog {
+public class RepCliProspOLD extends javax.swing.JDialog {
 
     /**
      * Creates new form RepCliProsp01
@@ -34,6 +36,7 @@ public class RepCliProsp extends javax.swing.JDialog {
     //Création d'une variable indiquant dans quel fenetre de menu on travail
         //Par défaut a l'ouverture menu "Représentant"
         char infoMenu = 'r';
+       
     private final TableauPersonaliseClient tbP = new TableauPersonaliseClient();
     public class AddAjouter extends AbstractAction{
 
@@ -43,6 +46,7 @@ public class RepCliProsp extends javax.swing.JDialog {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
+            //tbP.ajouterClient(new Client("","Tamere","Trouduculdumonde","Ducon","3","","","","","","","","",""));
             tbP.ajouterClient(new Client(jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(), jTextFieldAdresseNumeroRue.getText() ,jTextFieldAdresseComplement.getText(), 
             jTextFieldAdresseCP.getText(),jTextFieldAdresseVille.getText(), jTextFieldAdresseCedex.getText(),jComboBoxPays.getSelectedItem().toString(),jTextFieldContactNom.getText(),
                 jTextFieldContactPrenom.getText(),jTextFieldContactTelephone1.getText(),jTextFieldContactTelephone2.getText(),jTextFieldContactFax.getText(),
@@ -50,9 +54,9 @@ public class RepCliProsp extends javax.swing.JDialog {
             
         }
         
-    }
+    }   
         
-    public RepCliProsp(java.awt.Frame parent, boolean modal) {
+    public RepCliProspOLD(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
@@ -84,8 +88,6 @@ public class RepCliProsp extends javax.swing.JDialog {
         
         //Cache les listes Clients et Prospects
         jScrollPaneClient.setVisible(false);
-        
-       
     }
 
     /**
@@ -144,19 +146,19 @@ public class RepCliProsp extends javax.swing.JDialog {
         jPanelDerniereProspection = new javax.swing.JPanel();
         jLabelDerniereProspectionDate = new javax.swing.JLabel();
         jTextFieldDerniereProspectionDate = new javax.swing.JTextField();
-        jScrollPaneRepresentant = new javax.swing.JScrollPane();
-        jTableRepresentant = new javax.swing.JTable();
-        jScrollPaneClient = new javax.swing.JScrollPane();
-        jTableClient = new javax.swing.JTable();
-        jScrollPaneProspect = new javax.swing.JScrollPane();
-        jTableProspect = new javax.swing.JTable();
         jButtonModifier = new javax.swing.JButton();
         jButtonAjouter = new javax.swing.JButton();
         jButtonSupprimer = new javax.swing.JButton();
         jButtonFermer = new javax.swing.JButton();
-        jButtonEnregister = new javax.swing.JButton(new AddAjouter());
+        jButtonEnregister = new javax.swing.JButton();
         jButtonAnnuler = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelLogo = new javax.swing.JLabel();
+        jScrollPaneClient = new javax.swing.JScrollPane();
+        jTableClient = new javax.swing.JTable();
+        jScrollPaneRepresentant = new javax.swing.JScrollPane();
+        jTableRepresentant = new javax.swing.JTable();
+        jScrollPaneProspect = new javax.swing.JScrollPane();
+        jTableProspect = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuRepresentant = new javax.swing.JMenu();
         jMenuClient = new javax.swing.JMenu();
@@ -327,12 +329,6 @@ public class RepCliProsp extends javax.swing.JDialog {
 
         jLabelContactMail.setText("E-Mail");
 
-        jTextFieldContactTelephone1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldContactTelephone1ActionPerformed(evt);
-            }
-        });
-
         jTextFieldContactTelephone2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldContactTelephone2ActionPerformed(evt);
@@ -394,7 +390,7 @@ public class RepCliProsp extends javax.swing.JDialog {
                 .addGroup(jPanelContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelContactMail)
                     .addComponent(jTextFieldContactMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         jPanelFond.add(jPanelContact);
@@ -544,72 +540,6 @@ public class RepCliProsp extends javax.swing.JDialog {
         jPanelFond.add(jPanelDerniereProspection);
         jPanelDerniereProspection.setBounds(405, 150, 385, 75);
 
-        jTableRepresentant.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jTableRepresentant.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Identifiant", "Nom", "Ville", "Fixe brut", "Taux com."
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTableRepresentant.getTableHeader().setReorderingAllowed(false);
-        jScrollPaneRepresentant.setViewportView(jTableRepresentant);
-
-        jPanelFond.add(jScrollPaneRepresentant);
-        jScrollPaneRepresentant.setBounds(10, 640, 780, 130);
-
-        jTableClient.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jTableClient.setModel(tbP);
-        jTableClient.getTableHeader().setReorderingAllowed(false);
-        jScrollPaneClient.setViewportView(jTableClient);
-
-        jPanelFond.add(jScrollPaneClient);
-        jScrollPaneClient.setBounds(10, 640, 780, 130);
-
-        jTableProspect.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jTableProspect.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Identifiant", "Enseigne", "Ville", "Derniére visite le", "Représentant"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTableProspect.getTableHeader().setReorderingAllowed(false);
-        jScrollPaneProspect.setViewportView(jTableProspect);
-
-        jPanelFond.add(jScrollPaneProspect);
-        jScrollPaneProspect.setBounds(10, 640, 780, 130);
-
         jButtonModifier.setText("Modifier");
         jButtonModifier.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -674,9 +604,75 @@ public class RepCliProsp extends javax.swing.JDialog {
         jPanelFond.add(jButtonAnnuler);
         jButtonAnnuler.setBounds(610, 600, 90, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LogoTronconeuse.png"))); // NOI18N
-        jPanelFond.add(jLabel1);
-        jLabel1.setBounds(430, 220, 385, 385);
+        jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LogoTronconeuse.png"))); // NOI18N
+        jPanelFond.add(jLabelLogo);
+        jLabelLogo.setBounds(430, 220, 385, 385);
+
+        jTableClient.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jTableClient.setModel(tbP);
+        jTableClient.getTableHeader().setReorderingAllowed(false);
+        jScrollPaneClient.setViewportView(jTableClient);
+
+        jPanelFond.add(jScrollPaneClient);
+        jScrollPaneClient.setBounds(10, 640, 780, 130);
+
+        jTableRepresentant.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jTableRepresentant.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Identifiant", "Nom", "Ville", "Fixe brut", "Taux com."
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableRepresentant.getTableHeader().setReorderingAllowed(false);
+        jScrollPaneRepresentant.setViewportView(jTableRepresentant);
+
+        jPanelFond.add(jScrollPaneRepresentant);
+        jScrollPaneRepresentant.setBounds(10, 640, 780, 130);
+
+        jTableProspect.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jTableProspect.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Identifiant", "Enseigne", "Ville", "Derniére visite le", "Représentant"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableProspect.getTableHeader().setReorderingAllowed(false);
+        jScrollPaneProspect.setViewportView(jTableProspect);
+
+        jPanelFond.add(jScrollPaneProspect);
+        jScrollPaneProspect.setBounds(10, 640, 780, 130);
 
         jMenuRepresentant.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/technicalsupportrepresentative_male_dark_32.png"))); // NOI18N
         jMenuRepresentant.setText("Représentant");
@@ -814,12 +810,12 @@ public class RepCliProsp extends javax.swing.JDialog {
     private void jButtonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterActionPerformed
         // TODO add your handling code here:
         
-        //Lorsque l'on clique sur ajouter : on vide tous les champs  ET les rend modifiable sauf jTextFieldDenominationIdentifiant (Identifiant)
+        //Lorsque l'on clique sur ajouter : on vide tous les champs  ET les rend modifiable sauf jTextFieldDenominationIdentifiant (Identifiant) etjTextFieldInformationCommercialeCommande
         JTextField[] tabsaisie = {jTextFieldDenominationNomSociete, jTextFieldAdresseNumeroRue,jTextFieldAdresseComplement,
             jTextFieldAdresseCP,jTextFieldAdresseVille, jTextFieldAdresseCedex,jTextFieldContactNom,
                 jTextFieldContactPrenom,jTextFieldContactTelephone1,jTextFieldContactTelephone2,jTextFieldContactFax,
                     jTextFieldContactMail, jTextFieldComplementSiret, jTextFieldComplementRepresentant, jTextFieldComplementSalaireFixeBrut, jTextFieldComplementTauxDeCommission,
-                        jTextFieldDerniereProspectionDate, jTextFieldInformationCommercialeCommande};
+                        jTextFieldDerniereProspectionDate};
        
         for (JTextField tabsaisie1 : tabsaisie) {
             tabsaisie1.setText("");
@@ -835,8 +831,7 @@ public class RepCliProsp extends javax.swing.JDialog {
     private void jButtonFermerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFermerActionPerformed
         // TODO add your handling code here:
         //this.setVisible(false);
-        JOptionPane jop = new JOptionPane();
-        int option = jop.showConfirmDialog(null, "Voulez-vous fermer cette fenêtre?", "Fermer?",
+        int option = JOptionPane.showConfirmDialog(null, "Voulez-vous fermer cette fenêtre?", "Fermer?",
                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
             //Si "Oui" :
             if (option == JOptionPane.OK_OPTION) {
@@ -851,12 +846,12 @@ public class RepCliProsp extends javax.swing.JDialog {
 
     private void jButtonModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModifierActionPerformed
         // TODO add your handling code here:
-        //Lorsque l'on clique sur modifier  on rend les champs modifiable sauf jTextFieldDenominationIdentifiant (Identifiant)
+        //Lorsque l'on clique sur modifier  on rend les champs modifiable sauf jTextFieldDenominationIdentifiant (Identifiant) et jTextFieldInformationCommercialeCommande
         JTextField[] tabsaisie = {jTextFieldDenominationNomSociete, jTextFieldAdresseNumeroRue,jTextFieldAdresseComplement,
             jTextFieldAdresseCP,jTextFieldAdresseVille, jTextFieldAdresseCedex,jTextFieldContactNom,
                 jTextFieldContactPrenom,jTextFieldContactTelephone1,jTextFieldContactTelephone2,jTextFieldContactFax,
                     jTextFieldContactMail, jTextFieldComplementSiret, jTextFieldComplementRepresentant, jTextFieldComplementSalaireFixeBrut, jTextFieldComplementTauxDeCommission,
-                        jTextFieldDerniereProspectionDate, jTextFieldInformationCommercialeCommande};
+                        jTextFieldDerniereProspectionDate};
        
         for (JTextField tabsaisie1 : tabsaisie) {
             tabsaisie1.setEditable(true);            
@@ -882,8 +877,7 @@ public class RepCliProsp extends javax.swing.JDialog {
         // TODO add your handling code here:
         
        //Ouverture d'une fenetre de confirmation "Quitter sans sauvegarde"       
-        JOptionPane jop = new JOptionPane();
-        int option = jop.showConfirmDialog(null, "Voulez-vous quitter sans sauvegarder ?", "Quitter sans sauvegarde?",
+        int option = JOptionPane.showConfirmDialog(null, "Voulez-vous quitter sans sauvegarder ?", "Quitter sans sauvegarde?",
                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
             //Si "Oui" :
             if (option == JOptionPane.OK_OPTION) {
@@ -911,6 +905,7 @@ public class RepCliProsp extends javax.swing.JDialog {
 
     private void jButtonEnregisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEnregisterMouseClicked
         // TODO add your handling code here:
+        //String menu = Character.toString(infoMenu);
         String chaineSaisi = "";
         chaineSaisi = jTextFieldDenominationNomSociete.getText()+ " " + jTextFieldDenominationIdentifiant.getText()+" " + jTextFieldAdresseNumeroRue.getText()+ " " + jTextFieldAdresseComplement.getText()+" " +
             jTextFieldAdresseCP.getText()+" " +jTextFieldAdresseVille.getText()+" " + jTextFieldAdresseCedex.getText()+" " +jComboBoxPays.getSelectedItem()+" " +jTextFieldContactNom.getText()+" " +
@@ -922,22 +917,16 @@ public class RepCliProsp extends javax.swing.JDialog {
         lef.ecritureClient(chaineSaisi);
         
         
-
-        
-
         /*Client client1 = new Client(jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(), jTextFieldAdresseNumeroRue.getText() ,jTextFieldAdresseComplement.getText(), 
             jTextFieldAdresseCP.getText(),jTextFieldAdresseVille.getText(), jTextFieldAdresseCedex.getText(),jComboBoxPays.getSelectedItem().toString(),jTextFieldContactNom.getText(),
                 jTextFieldContactPrenom.getText(),jTextFieldContactTelephone1.getText(),jTextFieldContactTelephone2.getText(),jTextFieldContactFax.getText(),
                     jTextFieldContactMail.getText());*/
-
         
         
     }//GEN-LAST:event_jButtonEnregisterMouseClicked
 
     private void jButtonEnregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnregisterActionPerformed
         // TODO add your handling code here:
-        
-        
     }//GEN-LAST:event_jButtonEnregisterActionPerformed
 
     private void jTextFieldDenominationIdentifiantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDenominationIdentifiantActionPerformed
@@ -954,36 +943,27 @@ public class RepCliProsp extends javax.swing.JDialog {
 
     private void jMenuImprimerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuImprimerMouseClicked
         // TODO add your handling code here:
-
+        
         String menu = Character.toString(infoMenu);
-         //Mets les champs de la fiche dans un tableau apres les avoir convertit en String
-         String tabChaineSaisie[] = { jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(),
-             jTextFieldAdresseNumeroRue.getText(), jTextFieldAdresseComplement.getText(), jTextFieldAdresseCP.getText(),
-             jTextFieldAdresseVille.getText(), jTextFieldAdresseCedex.getText(),jComboBoxPays.getSelectedItem().toString(),
-             jTextFieldContactNom.getText(), jTextFieldContactPrenom.getText(),jTextFieldContactTelephone1.getText(),
-             jTextFieldContactTelephone2.getText(),jTextFieldContactFax.getText(),jTextFieldContactMail.getText(), 
-             jTextFieldComplementSiret.getText(), jTextFieldComplementRepresentant.getText(),
-             jTextFieldComplementSalaireFixeBrut.getText(), jTextFieldComplementTauxDeCommission.getText(),
-             jTextFieldInformationCommercialeCommande.getText(), jTextFieldDerniereProspectionDate.getText(), menu};
-         
-         
-          //Méthode imprimer de Impression
-          Impression fiche = new Impression();
-         
-         fiche.imprimer(tabChaineSaisie);
-
+        //Mets les champs de la fiche dans un tableau apres les avoir convertit en String
+        String tabChaineSaisie[] = { jTextFieldDenominationNomSociete.getText(), jTextFieldDenominationIdentifiant.getText(),
+            jTextFieldAdresseNumeroRue.getText(), jTextFieldAdresseComplement.getText(), jTextFieldAdresseCP.getText(),
+            jTextFieldAdresseVille.getText(), jTextFieldAdresseCedex.getText(),jComboBoxPays.getSelectedItem().toString(),
+            jTextFieldContactNom.getText(), jTextFieldContactPrenom.getText(),jTextFieldContactTelephone1.getText(),
+            jTextFieldContactTelephone2.getText(),jTextFieldContactFax.getText(),jTextFieldContactMail.getText(), 
+            jTextFieldComplementSiret.getText(), jTextFieldComplementRepresentant.getText(),
+            jTextFieldComplementSalaireFixeBrut.getText(), jTextFieldComplementTauxDeCommission.getText(),
+            jTextFieldInformationCommercialeCommande.getText(), jTextFieldDerniereProspectionDate.getText(), menu};
         
         
-
+        //Méthode imprimer de Impression
+        Impression fiche = new Impression();
+        fiche.imprimer(tabChaineSaisie);
     }//GEN-LAST:event_jMenuImprimerMouseClicked
-
-    private void jTextFieldContactTelephone1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldContactTelephone1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldContactTelephone1ActionPerformed
 
     private void jTextFieldDenominationNomSocieteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDenominationNomSocieteFocusLost
         // TODO add your handling code here:
-        
+
         //Méthode de controle saisie (2 < longueur champ < 30)
         ControleSaisie ctrl = new ControleSaisie();
         ctrl.setLongueur(jTextFieldDenominationNomSociete.getText().length());
@@ -999,6 +979,7 @@ public class RepCliProsp extends javax.swing.JDialog {
             /*Border borderEmpty = BorderFactory.createEmptyBorder();
             jTextFieldDenominationNomSociete.setBorder(borderEmpty);*/
         }
+
     }//GEN-LAST:event_jTextFieldDenominationNomSocieteFocusLost
 
     private void jTextFieldAdresseNumeroRueFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldAdresseNumeroRueFocusLost
@@ -1012,10 +993,7 @@ public class RepCliProsp extends javax.swing.JDialog {
             jLabelAdresseNumeroRue.setForeground(Color.red);
         } else {
             jLabelAdresseNumeroRue.setForeground(Color.black);
-        
-    }                                                    
-
-        
+        }
     }//GEN-LAST:event_jTextFieldAdresseNumeroRueFocusLost
 
     /**
@@ -1035,21 +1013,23 @@ public class RepCliProsp extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RepCliProsp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RepCliProspOLD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RepCliProsp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RepCliProspOLD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RepCliProsp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RepCliProspOLD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RepCliProsp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RepCliProspOLD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                RepCliProsp dialog = new RepCliProsp(new javax.swing.JFrame(), true);
+                RepCliProspOLD dialog = new RepCliProspOLD(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -1070,7 +1050,6 @@ public class RepCliProsp extends javax.swing.JDialog {
     private javax.swing.JButton jButtonSupprimer;
     private javax.swing.JComboBox<String> jComboBoxPays;
     private javax.swing.JLabel jLabeContactTelephone;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAdresseCPVilleCedex;
     private javax.swing.JLabel jLabelAdresseComplement;
     private javax.swing.JLabel jLabelAdresseNumeroRue;
@@ -1089,6 +1068,7 @@ public class RepCliProsp extends javax.swing.JDialog {
     private javax.swing.JLabel jLabelDenominationNomSociete;
     private javax.swing.JLabel jLabelDerniereProspectionDate;
     private javax.swing.JLabel jLabelInformationCommercialeCommande;
+    private javax.swing.JLabel jLabelLogo;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuClient;
     private javax.swing.JMenu jMenuImprimer;
@@ -1128,6 +1108,4 @@ public class RepCliProsp extends javax.swing.JDialog {
     private javax.swing.JTextField jTextFieldDerniereProspectionDate;
     private javax.swing.JTextField jTextFieldInformationCommercialeCommande;
     // End of variables declaration//GEN-END:variables
-    
-  
 }

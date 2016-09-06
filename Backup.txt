@@ -13,3 +13,11 @@ jTextField2*jTextField1*jTextField1*jTextField2*jTextField2
 *sefsef*sgseg*segsegs**javax.swing.DefaultComboBoxModel@508e3c01
 texte à imprimer
 texte à imprimer
+texte à imprimer
+[Ljava.lang.String;@6b98de8c
+[Ljava.lang.String;@41500bf3
+[Ljava.lang.String;@7d8d5d64
+[Ljava.lang.String;@4b4f0bc8
+[Ljava.lang.String;@3e0094f4
+[Ljava.lang.String;@105f130
+[Ljava.lang.String;@7fd9dcf6

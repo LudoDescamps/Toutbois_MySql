@@ -10,9 +10,9 @@ package Classe;
  * @author Tsoutsou
  */
 public class Societe {
-    private String nom;
-    private String prenom;
-    private String numRueAdresse;
+    String nom;
+    String prenom;
+    String numRueAdresse;
     private String cp;
     private String ville;
     private String pays;
@@ -20,8 +20,10 @@ public class Societe {
     private String telephonePortable;
     private String fax;
     private String email;
+    private String cedex;
+    private String complementAdresse;
 
-    public Societe(String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email) {
+    public Societe(String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email, String cedex, String complementAdresse) {
         this.nom = nom;
         this.prenom = prenom;
         this.numRueAdresse = numRueAdresse;
@@ -32,10 +34,8 @@ public class Societe {
         this.telephonePortable = telephonePortable;
         this.fax = fax;
         this.email = email;
-    }
-
-    public Societe() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.cedex = cedex;
+        this.complementAdresse = complementAdresse;
     }
 
     public String getNom() {
@@ -117,5 +117,30 @@ public class Societe {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+    public String getCedex() {
+        return cedex;
+    }
+
+    public void setCedex(String cedex) {
+        this.cedex = cedex;
+    }
+
+    public String getComplementAdresse() {
+        return complementAdresse;
+    }
+
+    public void setComplementAdresse(String complementAdresse) {
+        this.complementAdresse = complementAdresse;
+    }
+
+    
+
+    @Override
+    public String toString() {
+        return nom + prenom + numRueAdresse + ", cp=" + cp + ", ville=" + ville + ", pays=" + pays + ", telephone=" + telephone + ", telephonePortable=" + telephonePortable + ", fax=" + fax + ", email=" + email + '}';
+    }
+
     
 }

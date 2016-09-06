@@ -16,17 +16,14 @@ public class Client extends Societe {
     private String siret;
     private String nombreCommandePassees;
 
-    public Client(String enseigneClient, String idClient, String siret, String nombreCommandePassees, String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email) {
-        super(nom, prenom, numRueAdresse, cp, ville, pays, telephone, telephonePortable, fax, email);
+    public Client(String enseigneClient, String idClient, String siret, String nombreCommandePassees, String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email, String cedex, String complementAdresse) {
+        super(nom, prenom, numRueAdresse, cp, ville, pays, telephone, telephonePortable, fax, email, cedex, complementAdresse);
         this.enseigneClient = enseigneClient;
         this.idClient = idClient;
         this.siret = siret;
         this.nombreCommandePassees = nombreCommandePassees;
     }
 
-    public Client() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     public String getEnseigneClient() {
         return enseigneClient;
@@ -62,9 +59,8 @@ public class Client extends Societe {
 
     @Override
     public String toString() {
-        return super.toString()+"Client{" + "enseigneClient=" + enseigneClient + ", idClient=" + idClient + ", siret=" + siret + ", nombreCommandePassees=" + nombreCommandePassees + '}';
+        return enseigneClient + "," + idClient + "," + siret + "," + nombreCommandePassees+ super.toString() ;
     }
-    
 
-    
+       
 }

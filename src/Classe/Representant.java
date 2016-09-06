@@ -15,8 +15,10 @@ public class Representant extends Societe{
     private String salaireFixe;
     private String tauxCommission;
 
-    public Representant(String nomRepresentant, String idRepresentant, String salaireFixe, String tauxCommission, String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email) {
-        super(nom, prenom, numRueAdresse, cp, ville, pays, telephone, telephonePortable, fax, email);
+    public Representant(String nomRepresentant, String idRepresentant, String salaireFixe, String tauxCommission,
+            String nom, String prenom, String numRueAdresse, String complementAdresse,  String cp, String ville, String cedex, String pays, String telephone1,
+            String telephone2, String fax, String email) {
+        super(nom, prenom, numRueAdresse,complementAdresse, cp, ville, cedex, pays, telephone1, telephone2, fax, email);
         this.nomRepresentant = nomRepresentant;
         this.idRepresentant = idRepresentant;
         this.salaireFixe = salaireFixe;
@@ -55,4 +57,8 @@ public class Representant extends Societe{
         this.tauxCommission = tauxCommission;
     }
     
+    @Override
+    public String toString() {
+        return  nomRepresentant +"|"+ idRepresentant +"|"+salaireFixe +"|"+ tauxCommission + "|"+super.toString();
+    }
 }

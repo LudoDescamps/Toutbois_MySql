@@ -5,6 +5,7 @@
  */
 package IHM;
 
+import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
@@ -19,7 +20,13 @@ public class Accueil extends javax.swing.JFrame {
      */
     public Accueil() {
         initComponents();
+        intialise();
+       
     }
+    //Affiche un logo au lieu de l'icone java
+     private void intialise() {
+            this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("LogoTronconeuse.png")));
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
