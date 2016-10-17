@@ -5,9 +5,7 @@
  */
 package Utilitaire;
 
-import IHM.RepCliProspOLD;
 import java.io.*;
-import javax.swing.JTextField;
 
 
 

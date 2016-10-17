@@ -10,19 +10,25 @@ package Classe;
  * @author Tsoutsou
  */
 public class Representant extends Societe{
+    private static int cptRep = 0;
     private String nomRepresentant;
-    private String idRepresentant;
+    private int idRepresentant;
     private String salaireFixe;
     private String tauxCommission;
 
-    public Representant(String nomRepresentant, String idRepresentant, String salaireFixe, String tauxCommission,
-            String nom, String prenom, String numRueAdresse, String complementAdresse,  String cp, String ville, String cedex, String pays, String telephone1,
-            String telephone2, String fax, String email) {
-        super(nom, prenom, numRueAdresse,complementAdresse, cp, ville, cedex, pays, telephone1, telephone2, fax, email);
+    public Representant(String nomRepresentant, int idRepresentant, String salaireFixe, String tauxCommission, String nom, String prenom, 
+            String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email,
+            String cedex, String complementAdresse) {
+        super(nom, prenom, numRueAdresse, cp, ville, pays, telephone, telephonePortable, fax, email, cedex, complementAdresse);
         this.nomRepresentant = nomRepresentant;
-        this.idRepresentant = idRepresentant;
         this.salaireFixe = salaireFixe;
         this.tauxCommission = tauxCommission;
+        Representant.cptRep ++;
+        this.idRepresentant = Representant.cptRep;
+    }
+
+    public Representant(){
+        
     }
 
     public String getNomRepresentant() {
@@ -33,11 +39,11 @@ public class Representant extends Societe{
         this.nomRepresentant = nomRepresentant;
     }
 
-    public String getIdRepresentant() {
+    public int getIdRepresentant() {
         return idRepresentant;
     }
 
-    public void setIdRepresentant(String idRepresentant) {
+    public void setIdRepresentant(int idRepresentant) {
         this.idRepresentant = idRepresentant;
     }
 
@@ -56,9 +62,24 @@ public class Representant extends Societe{
     public void setTauxCommission(String tauxCommission) {
         this.tauxCommission = tauxCommission;
     }
-    
+
+    public static int getCptRep() {
+        return cptRep;
+    }
+
+    public static void setCptRep(int cptRep) {
+        Representant.cptRep = cptRep;
+    }
+
     @Override
     public String toString() {
-        return  nomRepresentant +"|"+ idRepresentant +"|"+salaireFixe +"|"+ tauxCommission + "|"+super.toString();
+        return "Representant{" + "nomRepresentant=" + nomRepresentant + ", idRepresentant=" + idRepresentant + ", salaireFixe=" + salaireFixe + ", tauxCommission=" + tauxCommission + 
+                ", nom=" + getNom() + ", prenom=" + getPrenom() + ", adresse=" +getNumRueAdresse() + ", cp=" + getCp() + ", ville=" + getVille() + ", pays=" + getPays() + ", telephone=" + getTelephone() + ", telephonePortable=" +
+                getTelephonePortable() + ", fax=" + getFax() + ", email=" + getEmail() + '}';
     }
+
+    
+
+    
+    
 }

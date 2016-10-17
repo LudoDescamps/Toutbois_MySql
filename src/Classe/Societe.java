@@ -10,9 +10,9 @@ package Classe;
  * @author Tsoutsou
  */
 public class Societe {
-    String nom;
-    String prenom;
-    String numRueAdresse;
+    private String nom;
+    private String prenom;
+    private String numRueAdresse;
     private String cp;
     private String ville;
     private String pays;
@@ -22,6 +22,12 @@ public class Societe {
     private String email;
     private String cedex;
     private String complementAdresse;
+    private static int cptSociete;
+
+    public Societe() {
+    }
+    
+    
 
     public Societe(String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email, String cedex, String complementAdresse) {
         this.nom = nom;
@@ -135,6 +141,16 @@ public class Societe {
         this.complementAdresse = complementAdresse;
     }
 
+    public static int getCptSociete() {
+        return cptSociete;
+    }
+
+    public static void setCptSociete(int cptSociete) {
+        Societe.cptSociete = cptSociete;
+    }
+
+  
+
     
 
     @Override
@@ -142,5 +158,5 @@ public class Societe {
         return nom + prenom + numRueAdresse + ", cp=" + cp + ", ville=" + ville + ", pays=" + pays + ", telephone=" + telephone + ", telephonePortable=" + telephonePortable + ", fax=" + fax + ", email=" + email + '}';
     }
 
-    
+   
 }

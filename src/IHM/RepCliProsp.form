@@ -190,39 +190,50 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelAdresseComplement" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelAdresseNumeroRue" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextFieldAdresseComplement" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldAdresseNumeroRue" min="-2" pref="250" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelAdresseCPVilleCedex" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelAdresseCP" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabelAdresseVille" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabelAdresseCedex" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="jLabelAdressePays" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jTextFieldAdresseCP" min="-2" pref="50" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldAdresseVille" pref="130" max="32767" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldAdresseCedex" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldAdresseVille" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jComboBoxPays" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jTextFieldPays" min="-2" pref="252" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxPays" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="jTextFieldAdresseCedex" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabelAdresseComplement" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelAdresseNumeroRue" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTextFieldAdresseComplement" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldAdresseNumeroRue" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -240,15 +251,18 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelAdresseCPVilleCedex" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAdresseCP" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAdresseCP" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAdresseVille" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAdresseCedex" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAdresseVille" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAdresseCedex" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAdressePays" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBoxPays" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPays" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   </Group>
@@ -280,12 +294,19 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldAdresseVille">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldAdresseVilleFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldAdresseCP">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldAdresseCPFocusLost"/>
+                <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jTextFieldAdresseCPInputMethodTextChanged"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelAdresseCPVilleCedex">
+            <Component class="javax.swing.JLabel" name="jLabelAdresseCP">
               <Properties>
-                <Property name="text" type="java.lang.String" value="CP Ville Cedex"/>
+                <Property name="text" type="java.lang.String" value="CP"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelAdressePays">
@@ -296,8 +317,8 @@
             <Component class="javax.swing.JComboBox" name="jComboBoxPays">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="28">
-                    <StringItem index="0" value="France"/>
+                  <StringArray count="29">
+                    <StringItem index="0" value="Selectionnez votre pays :"/>
                     <StringItem index="1" value="Allemagne"/>
                     <StringItem index="2" value="Autriche"/>
                     <StringItem index="3" value="Belgique"/>
@@ -308,23 +329,24 @@
                     <StringItem index="8" value="Espagne"/>
                     <StringItem index="9" value="Estonie"/>
                     <StringItem index="10" value="Finlande"/>
-                    <StringItem index="11" value="Gr&#xe8;ce"/>
-                    <StringItem index="12" value="Hongrie"/>
-                    <StringItem index="13" value="Irlande"/>
-                    <StringItem index="14" value="Italie"/>
-                    <StringItem index="15" value="Lituanie"/>
+                    <StringItem index="11" value="France"/>
+                    <StringItem index="12" value="Gr&#xe8;ce"/>
+                    <StringItem index="13" value="Hongrie"/>
+                    <StringItem index="14" value="Irlande"/>
+                    <StringItem index="15" value="Italie"/>
                     <StringItem index="16" value="Lettonie"/>
-                    <StringItem index="17" value="Luxembourg"/>
-                    <StringItem index="18" value="Malte"/>
-                    <StringItem index="19" value="Pays-Bas"/>
-                    <StringItem index="20" value="Pologne"/>
-                    <StringItem index="21" value="Portugal"/>
-                    <StringItem index="22" value="R&#xe9;publique tch&#xe8;que"/>
-                    <StringItem index="23" value="Roumanie"/>
-                    <StringItem index="24" value="Royaume-Uni"/>
-                    <StringItem index="25" value="Slovaquie"/>
-                    <StringItem index="26" value="Slov&#xe9;nie"/>
-                    <StringItem index="27" value="Su&#xe8;de"/>
+                    <StringItem index="17" value="Lituanie"/>
+                    <StringItem index="18" value="Luxembourg"/>
+                    <StringItem index="19" value="Malte"/>
+                    <StringItem index="20" value="Pays-Bas"/>
+                    <StringItem index="21" value="Pologne"/>
+                    <StringItem index="22" value="Portugal"/>
+                    <StringItem index="23" value="R&#xe9;publique tch&#xe8;que"/>
+                    <StringItem index="24" value="Roumanie"/>
+                    <StringItem index="25" value="Royaume-Uni"/>
+                    <StringItem index="26" value="Slovaquie"/>
+                    <StringItem index="27" value="Slov&#xe9;nie"/>
+                    <StringItem index="28" value="Su&#xe8;de"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -334,6 +356,18 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelAdresseVille">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ville"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelAdresseCedex">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cedex"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldPays">
             </Component>
           </SubComponents>
         </Container>
@@ -428,6 +462,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="jTextFieldContactNom">
+              <Events>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldContactNomFocusGained"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldContactNomFocusLost"/>
+                <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jTextFieldContactNomInputMethodTextChanged"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelContactNom">
               <Properties>
@@ -455,11 +494,15 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldContactMail">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldContactMailFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldContactFax">
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldContactTelephone1">
               <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldContactTelephone1FocusLost"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldContactTelephone1ActionPerformed"/>
               </Events>
             </Component>
@@ -469,6 +512,94 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldContactPrenom">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanelComplementClientProspect">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Compl&#xe9;ment"/>
+              </Border>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="405" y="20" width="385" height="120"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelComplementSiret" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelComplementRepresentant" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jTextFieldComplementSiret" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jTextFieldComplementRepresentant" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jComboBoxRepresentants" min="-2" pref="250" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelComplementSiret" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldComplementSiret" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelComplementRepresentant" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldComplementRepresentant" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxRepresentants" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabelComplementSiret">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="SIRET"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jLabelComplementSiretFocusLost"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldComplementSiret">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldComplementSiretFocusLost"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldComplementRepresentant">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldComplementRepresentantActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelComplementRepresentant">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Repr&#xe9;sentant"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBoxRepresentants">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxRepresentantsActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -540,8 +671,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldComplementTauxDeCommission">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldComplementTauxDeCommissionFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldComplementSalaireFixeBrut">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldComplementSalaireFixeBrutFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelComplementTauxDeCommissionPourcent">
               <Properties>
@@ -555,69 +692,57 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanelComplementClientProspect">
+        <Container class="javax.swing.JPanel" name="jPanelDerniereProspection">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Compl&#xe9;ment"/>
+                <TitledBorder title="Derni&#xe8;re prospection"/>
               </Border>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="405" y="20" width="385" height="120"/>
+              <AbsoluteConstraints x="405" y="150" width="385" height="75"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelComplementSiret" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelComplementRepresentant" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jTextFieldComplementSiret" min="-2" pref="250" max="-2" attributes="0"/>
-                          <Component id="jTextFieldComplementRepresentant" min="-2" pref="250" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="jLabelDerniereProspectionDate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
+                      <Component id="jTextFieldDerniereProspectionDate" min="-2" pref="250" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelComplementSiret" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldComplementSiret" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDerniereProspectionDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDerniereProspectionDate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelComplementRepresentant" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldComplementRepresentant" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabelComplementSiret">
+            <Component class="javax.swing.JLabel" name="jLabelDerniereProspectionDate">
               <Properties>
-                <Property name="text" type="java.lang.String" value="SIRET"/>
+                <Property name="text" type="java.lang.String" value="Date"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldComplementSiret">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldComplementRepresentant">
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelComplementRepresentant">
+            <Component class="javax.swing.JTextField" name="jTextFieldDerniereProspectionDate">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Repr&#xe9;sentant"/>
+                <Property name="toolTipText" type="java.lang.String" value="aaaa-mm-jj"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDerniereProspectionDateActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -669,57 +794,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanelDerniereProspection">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Derni&#xe8;re prospection"/>
-              </Border>
-            </Property>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="405" y="150" width="385" height="75"/>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabelDerniereProspectionDate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="80" max="32767" attributes="0"/>
-                      <Component id="jTextFieldDerniereProspectionDate" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextFieldDerniereProspectionDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelDerniereProspectionDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabelDerniereProspectionDate">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Date"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldDerniereProspectionDate">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDerniereProspectionDateActionPerformed"/>
-              </Events>
-            </Component>
-          </SubComponents>
-        </Container>
         <Container class="javax.swing.JScrollPane" name="jScrollPaneRepresentant">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -739,14 +813,8 @@
                     <TitledBorder/>
                   </Border>
                 </Property>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="7">
-                    <Column editable="false" title="Identifiant" type="java.lang.Object"/>
-                    <Column editable="false" title="Nom" type="java.lang.Object"/>
-                    <Column editable="false" title="Ville" type="java.lang.Object"/>
-                    <Column editable="false" title="Fixe brut" type="java.lang.Object"/>
-                    <Column editable="false" title="Taux com." type="java.lang.Object"/>
-                  </Table>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="model" type="code"/>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
@@ -781,6 +849,9 @@
                   <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTableRepresentantMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -804,7 +875,7 @@
                   </Border>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="tbP" type="code"/>
+                  <Connection code="tabClient" type="code"/>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
@@ -839,6 +910,9 @@
                   <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTableClientMouseClicked"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable()"/>
               </AuxValues>
@@ -864,14 +938,8 @@
                     <TitledBorder/>
                   </Border>
                 </Property>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="7">
-                    <Column editable="false" title="Identifiant" type="java.lang.Object"/>
-                    <Column editable="false" title="Enseigne" type="java.lang.Object"/>
-                    <Column editable="false" title="Ville" type="java.lang.Object"/>
-                    <Column editable="false" title="Derni&#xe9;re visite le" type="java.lang.Object"/>
-                    <Column editable="false" title="Repr&#xe9;sentant" type="java.lang.Object"/>
-                  </Table>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="tabProspect" type="code"/>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
@@ -906,6 +974,9 @@
                   <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTableProspectMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -941,6 +1012,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Supprimer"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSupprimerActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="400" y="785" width="90" height="-1"/>
@@ -967,9 +1041,10 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonEnregisterMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEnregisterActionPerformed"/>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jButtonEnregisterPropertyChange"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JButton(new AddAjouter())"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JButton()"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -990,7 +1065,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jLabeImage">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/LogoTronconeuse.png"/>

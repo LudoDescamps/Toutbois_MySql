@@ -5,9 +5,12 @@
  */
 package IHM;
 
+import Utilitaire.Bdds;
 import java.awt.Toolkit;
-import javax.swing.JFrame;
-import javax.swing.UIManager;
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,9 +21,14 @@ public class Accueil extends javax.swing.JFrame {
     /**
      * Creates new form Accueil
      */
-    public Accueil() {
+    public Accueil() throws SQLException {
         initComponents();
         intialise();
+        
+        //Ouverture des tables représentant, client et prospect
+        Bdds.lireBdd('r', "representant");
+        Bdds.lireBdd('c', "client");
+        Bdds.lireBdd('p', "prospect");
        
     }
     //Affiche un logo au lieu de l'icone java
@@ -111,7 +119,12 @@ public class Accueil extends javax.swing.JFrame {
 
     private void jButtonRepCliProspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRepCliProspActionPerformed
         // TODO add your handling code here:
-        RepCliProsp f = new RepCliProsp(new java.awt.Frame(),true);
+        RepCliProsp f = null;
+        try {
+            f = new RepCliProsp(new java.awt.Frame(),true);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Accueil.class.getName()).log(Level.SEVERE, null, ex);
+        }
         f.setVisible(true);
         
     }//GEN-LAST:event_jButtonRepCliProspActionPerformed
@@ -154,7 +167,11 @@ public class Accueil extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Accueil().setVisible(true);
+                try {
+                    new Accueil().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Accueil.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

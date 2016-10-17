@@ -11,19 +11,26 @@ package Classe;
  */
 public class Prospect extends Societe {
     
+    private static int cptProspect = 0;
     private String enseigneProspect;
-    private String idProspect;
+    private int idProspect;
     private String representant;
     private String derniereProspectionDate;
+        private String siret;
 
-    public Prospect(String enseigneProspect, String idProspect, String representant, String derniereProspectionDate, String nom, String prenom, String numRueAdresse, String complementAdresse, String cp, String ville, String cedex, String pays, String telephone1, String telephone2, String fax, String email) {
-        super(nom, prenom, numRueAdresse, complementAdresse, cp, ville, cedex, pays, telephone1, telephone2, fax, email);
+    public Prospect(String enseigneProspect, int idProspect, String representant, String derniereProspectionDate,String siret, String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email, String cedex, String complementAdresse) {
+        super(nom, prenom, numRueAdresse, cp, ville, pays, telephone, telephonePortable, fax, email, cedex, complementAdresse);
         this.enseigneProspect = enseigneProspect;
-        this.idProspect = idProspect;
         this.representant = representant;
         this.derniereProspectionDate = derniereProspectionDate;
+        this.siret = siret;
+        Prospect.cptProspect ++;
+        this.idProspect=Prospect.cptProspect;
+        
     }
-
+    public Prospect (){
+        
+    }
     public String getEnseigneProspect() {
         return enseigneProspect;
     }
@@ -32,11 +39,11 @@ public class Prospect extends Societe {
         this.enseigneProspect = enseigneProspect;
     }
 
-    public String getIdProspect() {
+    public int getIdProspect() {
         return idProspect;
     }
 
-    public void setIdProspect(String idProspect) {
+    public void setIdProspect(int idProspect) {
         this.idProspect = idProspect;
     }
 
@@ -56,9 +63,27 @@ public class Prospect extends Societe {
         this.derniereProspectionDate = derniereProspectionDate;
     }
 
+    public static int getCptProspect() {
+        return cptProspect;
+    }
+
+    public static void setCptProspect(int cptProspect) {
+        Prospect.cptProspect = cptProspect;
+    }
+
+    public String getSiret() {
+        return siret;
+    }
+
+    public void setSiret(String siret) {
+        this.siret = siret;
+    }
+
     @Override
     public String toString() {
-        return enseigneProspect + "|" + idProspect + "|" + representant + "|" + derniereProspectionDate + "|"+super.toString();
+        return "Prospect{" + "enseigneProspect=" + enseigneProspect + ", idProspect=" + idProspect + ", representant=" + representant + ", derniereProspectionDate=" + derniereProspectionDate + ", siret=" + siret + '}';
     }
+    
+
     
 }

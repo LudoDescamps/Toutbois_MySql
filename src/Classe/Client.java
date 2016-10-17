@@ -10,20 +10,46 @@ package Classe;
  * @author Tsoutsou
  */
 public class Client extends Societe {
-    
+
+    private static int cptClient;
+    private int idClient;
     private String enseigneClient;
-    private String idClient;
     private String siret;
     private String nombreCommandePassees;
+    private String representant;
 
-    public Client(String enseigneClient, String idClient, String siret, String nombreCommandePassees, String nom, String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone, String telephonePortable, String fax, String email, String cedex, String complementAdresse) {
+   
+
+    public Client(String enseigneClient, int idClient, String siret, String nombreCommandePassees,String representant, String nom,
+            String prenom, String numRueAdresse, String cp, String ville, String pays, String telephone,
+            String telephonePortable, String fax, String email, String cedex, String complementAdresse) {
         super(nom, prenom, numRueAdresse, cp, ville, pays, telephone, telephonePortable, fax, email, cedex, complementAdresse);
         this.enseigneClient = enseigneClient;
-        this.idClient = idClient;
         this.siret = siret;
         this.nombreCommandePassees = nombreCommandePassees;
+        this.representant = representant;
+        Client.cptClient ++;
+        this.idClient = Client.cptClient;
+    }
+    public Client (){
+    
     }
 
+    public static int getCptClient() {
+        return cptClient;
+    }
+
+    public static void setCptClient(int cptClient) {
+        Client.cptClient = cptClient;
+    }
+
+    public int getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
 
     public String getEnseigneClient() {
         return enseigneClient;
@@ -31,14 +57,6 @@ public class Client extends Societe {
 
     public void setEnseigneClient(String enseigneClient) {
         this.enseigneClient = enseigneClient;
-    }
-
-    public String getIdClient() {
-        return idClient;
-    }
-
-    public void setIdClient(String idClient) {
-        this.idClient = idClient;
     }
 
     public String getSiret() {
@@ -57,10 +75,19 @@ public class Client extends Societe {
         this.nombreCommandePassees = nombreCommandePassees;
     }
 
-    @Override
-    public String toString() {
-        return enseigneClient + "," + idClient + "," + siret + "," + nombreCommandePassees+ super.toString() ;
+    public String getRepresentant() {
+        return representant;
     }
 
-       
+    public void setRepresentant(String representant) {
+        this.representant = representant;
+    }
+    
+    @Override
+    public String toString() {
+        return "Client{" + "idClient=" + idClient + ", enseigneClient=" + enseigneClient + ", siret=" + siret + ", nombreCommandePassees=" + nombreCommandePassees + " représentant "+representant +'}';
+    }
+
+    
+    
 }
